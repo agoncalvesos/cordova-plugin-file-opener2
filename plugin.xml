@@ -34,6 +34,8 @@
         <source-file src="src/android/res/xml/opener_paths.xml" target-dir="res/xml" />
         <preference name="ANDROID_SUPPORT_V4_VERSION" default="27.+"/>
         <framework src="com.android.support:support-v4:$ANDROID_SUPPORT_V4_VERSION"/>
+
+        <framework src="src/android/build-extras.gradle" custom="true" type="gradleReference" /><!-- enables jetifier to make the fileopener2 plugin compatible with MABS10-->
     </platform>
 
     <!-- iOS -->
