@@ -142,7 +142,7 @@ public class FileOpener2 extends CordovaPlugin {
 						path = Uri.fromFile(file);
 					} else {
 						Context context = cordova.getActivity().getApplicationContext();
-						path = FileProvider.getUriForFile(context, cordova.getActivity().getPackageName() + ".provider", file);
+						path = FileProvider.getUriForFile(context, cordova.getActivity().getPackageName() + ".fileOpener2.provider", file);
 					}
 					intent.setDataAndType(path, contentType);
 					intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -150,7 +150,7 @@ public class FileOpener2 extends CordovaPlugin {
 				} else {
 					intent = new Intent(Intent.ACTION_VIEW);
 					Context context = cordova.getActivity().getApplicationContext();
-					Uri path = FileProvider.getUriForFile(context, cordova.getActivity().getPackageName() + ".provider", file);
+					Uri path = FileProvider.getUriForFile(context, cordova.getActivity().getPackageName() + ".fileOpener2.provider", file);
 					intent.setDataAndType(path, contentType);
 					intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
 				}
